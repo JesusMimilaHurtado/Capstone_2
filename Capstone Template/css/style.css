@@ -6,3 +6,23 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+.carousel-item img{
+    height: 70vh
+}
+
+header{
+    background-color: rgb(66, 68, 70);
+}
+
+#nav a{
+    color:rgb(217, 253, 235);
+}
+
+footer{
+    background-color: rgb(66, 68, 70);
+    height:40px;
+    font-size: larger;
+    font-weight: bold;
+    color:rgb(217, 253, 235);
+}

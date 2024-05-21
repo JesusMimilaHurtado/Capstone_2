@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-success-subtle">
+<body class="bg-success-subtle vh-100 d-flex flex-column">
     <div class=".container-fluid">
         <header>
             <nav class="navbar navbar-expand">
@@ -25,27 +25,39 @@
             </nav>
         </header>
     </div>
-    <main>
         <h1>Search Our National Parks</h1>
-        <div class="container">
-            <div class="row">
-                
-                <input type="radio" name="location" id="location">
-                <label for="location">Location</label>
-                <input type="radio" name="type" id="type">
-                <label for="type">Type</label>
+     <main class="vh-80 d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+        <div class="container mt-5">
+            <div class="row justify-content-center mx-auto">
+                <fieldset class="col-5 text-center">
+                    <strong>Select By:</strong>
+                    <input type="radio" name="radio" id="location">
+                    <label for="location">Location</label>
+                    <input type="radio" name="radio" id="type">
+                    <label for="type">Type</label>
+                </fieldset>
             </div>
         </div>
-        <div>
-            <select name="dropdown" id="dropdown">
-                <option value="blank">--Choose--</option>
-            </select>
+        <div class="container mt-3">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <select name="dropdown" id="dropdown" class="form-select">
+                        <option value="blank" class="text-center">--Choose Location--</option>
+                    </select>
+                </div>
+            </div>
         </div>
+    <hr>
+    <h3>See Results Below</h3>
+    <img src="images/silhouette.webp" alt="placeholder" id="silhouette">
     </main>
+    <footer>
+        &copy Jesus Mimila - WildernessWonders 2024
+    </footer>
     <script src="scripts/locationData.js"></script>
     <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
-    <script src="scripts/nationalParks.js"></script>
+    <script src="scripts/nationalParks.js"></script> 
     <script src="scripts/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">

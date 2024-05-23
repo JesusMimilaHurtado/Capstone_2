@@ -1,9 +1,12 @@
-//  submitButton.addEventListener('click', async () => {
 
-//  });
+
+
+submitButton.addEventListener('click', async () => {
+
+});
 
 function mountainTemplate(mountain) {
-  //let mySunrise = getSunsetForMountain(`${mountain.coords.lat},${mountain.coords.lng}`);
+  let mySunrise = getSunsetForMountain(`${mountain.coords.lat},${mountain.coords.lng}`);
 
   return `
     <div class="mountain">

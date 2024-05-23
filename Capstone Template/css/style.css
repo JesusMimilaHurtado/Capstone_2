@@ -37,8 +37,11 @@ hr{
     height:90%
 }
 
-.table{
+td, th{
     border:solid 2px  black;
-    border-left:solid 2px  black;
-    border-right:solid 2px  black;
+    margin:auto
+}
+
+table{
+    max-width:80%;
 }

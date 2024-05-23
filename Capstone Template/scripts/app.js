@@ -80,11 +80,11 @@ function displayInfo(value) {
     filteredArray.forEach(park => {
         const parkInfo = document.createElement('tr'); // Create 'parkInfo' inside the loop
         parkInfo.innerHTML = `
-            <th scope="row" class="text-center">${park.LocationID}</th>
-            <td class="text-center">${park.LocationName}</td>
-            <td class="text-center">${park.Address}</td>
-            <td class="text-center">${park.Phone}</td>
-            <td class="text-center">${park.Visit}</td>
+            <th scope="row" class="text-center col-2">${park.LocationID}</th>
+            <td class="text-center col-2">${park.LocationName}</td>
+            <td class="text-center col-2">${park.Address}</td>
+            <td class="text-center col-2">${park.Phone}</td>
+            <td class="text-center col-2">${park.Visit}</td>
         `;
         parkcell.appendChild(parkInfo);
     });

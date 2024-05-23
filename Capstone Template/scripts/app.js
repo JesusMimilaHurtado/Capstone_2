@@ -62,32 +62,32 @@ function getValue(){
     displayInfo(value)
 }
 
-function displayInfo(value){
+function displayInfo(value) {
     const img = document.getElementById('silhouette');
-    if(img){
-    img.remove();
+    if (img) {
+        img.style.display = 'none';
     }
 
-    if(img.style.display == 'none'){
-        info.style.display = 'block';
+    const info = document.getElementById('info'); // Ensure 'info' element is defined
+    if (img.style.display == 'none' && info) {
+        info.style.display = '';
     }
 
+    let filteredArray = nationalParksArray.filter(park => park.State.includes(value));
 
-    let filteredArray = nationalParksArray.filter(park => park.LocationName.includes(value));
-
-    console.log(value)
-    console.log(filteredArray)
+    const parkcell = document.getElementById('table'); // Ensure 'parkcell' is defined outside the loop
+    parkcell.innerHTML = ''; // Clear any existing content before appending
     filteredArray.forEach(park => {
-        const parkcell = document.getElementById('table');
+        const parkInfo = document.createElement('tr'); // Create 'parkInfo' inside the loop
         parkInfo.innerHTML = `
-        <th scope="row">${park.LocationID}</th>
-        <td>${park.LocationName}</td>
-        <td>${park.Address}</td>
-        <td>${park.Phone}</td>
-        <td>${park.Visit}</td>
+            <th scope="row" class="text-center">${park.LocationID}</th>
+            <td class="text-center">${park.LocationName}</td>
+            <td class="text-center">${park.Address}</td>
+            <td class="text-center">${park.Phone}</td>
+            <td class="text-center">${park.Visit}</td>
         `;
         parkcell.appendChild(parkInfo);
     });
 }
 
-dropdown.addEventListener('change', displayInfo)
+dropdown.addEventListener('change', getValue)

@@ -36,3 +36,9 @@ hr{
 #silhouette{
     height:90%
 }
+
+.table{
+    border:solid 2px  black;
+    border-left:solid 2px  black;
+    border-right:solid 2px  black;
+}

@@ -3,10 +3,13 @@
 window.onload = function(){
     displayOptions;
     dropdown.style.display = 'none';
+    info.style.display = 'none';
 
 }
 
 const dropdown = document.getElementById('dropdown');
+const info = document.getElementById('info');
+
 
 function displayOptions() {
     const radio = document.querySelector('input[name=radio]:checked').value;
@@ -22,8 +25,10 @@ function updateDropdown(radio) {
         const defaultOption = document.createElement('option');
         defaultOption.text = 'Choose Location';
         dropdown.appendChild(defaultOption);
+
         locationsArray.forEach(location => {
             const locationOption = document.createElement('option');
+            locationOption.value = location;
             locationOption.text = location;
             dropdown.appendChild(locationOption);
         });
@@ -34,13 +39,15 @@ function updateDropdown(radio) {
         const defaultOption = document.createElement('option');
         defaultOption.text = 'Choose Type';
         dropdown.appendChild(defaultOption);
+
         parkTypesArray.forEach(park => {
             const parkOption = document.createElement('option');
+            parkOption.value = park;
             parkOption.text = park;
             dropdown.appendChild(parkOption);
         });
     } 
-else {
+    else {
         dropdown.style.display = 'none';
     }
 }
@@ -50,20 +57,37 @@ document.querySelectorAll('input[name=radio]').forEach(radioButton => {
 radioButton.addEventListener('change', displayOptions);
 });
 
+function getValue(){
+    const value = dropdown.value;
+    displayInfo(value)
+}
+
 function displayInfo(value){
     const img = document.getElementById('silhouette');
+    if(img){
     img.remove();
+    }
 
-    nationalParksArray.forEach(park => {
+    if(img.style.display == 'none'){
+        info.style.display = 'block';
+    }
+
+
+    let filteredArray = nationalParksArray.filter(park => park.LocationName.includes(value));
+
+    console.log(value)
+    console.log(filteredArray)
+    filteredArray.forEach(park => {
         const parkcell = document.getElementById('table');
-        parkcell.innerHTML = `
+        parkInfo.innerHTML = `
         <th scope="row">${park.LocationID}</th>
         <td>${park.LocationName}</td>
-        <td>${park.}</td>
-        <td>${park.}</td>
-        <td>${park.}</td>
+        <td>${park.Address}</td>
+        <td>${park.Phone}</td>
+        <td>${park.Visit}</td>
         `;
-        courseList.appendChild(courseCard);
+        parkcell.appendChild(parkInfo);
     });
-
 }
+
+dropdown.addEventListener('change', displayInfo)

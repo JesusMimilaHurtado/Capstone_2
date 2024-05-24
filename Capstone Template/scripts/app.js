@@ -24,7 +24,7 @@ function updateDropdown(radio) {
         info.style.display = 'none';
         dropdown.style.display = 'block';
         const defaultOption = document.createElement('option');
-        defaultOption.text = 'Choose Location';
+        defaultOption.text = '--Choose Location--';
         dropdown.appendChild(defaultOption);
 
         locationsArray.forEach(location => {
@@ -39,7 +39,7 @@ function updateDropdown(radio) {
         info.style.display = 'none';
         dropdown.style.display = 'block';
         const defaultOption = document.createElement('option');
-        defaultOption.text = 'Choose Type';
+        defaultOption.text = '--Choose Type--';
         dropdown.appendChild(defaultOption);
 
         parkTypesArray.forEach(park => {

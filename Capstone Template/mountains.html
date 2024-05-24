@@ -27,18 +27,26 @@
             </nav>
         </header>
     </div>
-    <main class="flex-grow-1">
-        <div id="app">adsf</div>
-        <div id="locations">asdf</div>
-        <div id="mountains">adsf</div>
+    <h1 class="display-4 text-center">Start exploring the 48 mountains we have on file!</h1>
+    <hr class="w-100">
+    <main class="vh-100 d-flex flex-column flex-grow-1"> 
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <select class="select form-select text-center"  name="mountains" id="mountain">
+                        <option value="blank">--Choose Mountain--</option>
+                    </select>
+                </div>
+                <div class="col-2 text-center">
+                    <button class="btn btn-primary" id="submit">
+                        click here
+                    </button>
+            </div>
+        </div>
+            
+        <div class="container mb-4" id="mountains">
 
-        <div id="">adf</div>
-
-
-        <button onclick="loadData();">
-            click here
-        </button>
-
+        </div>
     </main>
     <footer>
         &copy Jesus Mimila - WildernessWonders 2024

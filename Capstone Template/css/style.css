@@ -45,3 +45,8 @@ td, th{
 table{
     max-width:80%;
 }
+
+hr{
+    color:black;
+    height:2px;
+}

@@ -1,32 +1,60 @@
+"use strict"
 
+window.onload = function(){
+  addOptions();
+}
 
+const submitButton = document.getElementById('submit');
+const dropdown = document.getElementById('mountain');
 
-submitButton.addEventListener('click', async () => {
+function addOptions() {
 
-});
+  mountainsArray.forEach(mountain => {
+    const mountainOption = document.createElement('option');
+    mountainOption.value = mountain.name;
+    mountainOption.text = mountain.name;
+    dropdown.appendChild(mountainOption);
+  });
 
-function mountainTemplate(mountain) {
-  let mySunrise = getSunsetForMountain(`${mountain.coords.lat},${mountain.coords.lng}`);
+}
 
-  return `
-    <div class="mountain">
-    <img class="mountain-photo" src="images/${mountain.img}">
-    <h2 class="mountain-name">${mountain.name} <span class="species">(${mountain.elevation} feet)</span></h2>
-    <h4 class="mountain-desc">${mountain.desc} </h4>
-    <p><strong>Effort:</strong> ${mountain.effort}</p>
-    <strong>Coordinates:</strong> lat: ${mountain.coords.lat} lng: ${mountain.coords.lng}
-    <strong>Sunrise:</strong> ${mySunrise}
+function filterMountain(){
+  let value = dropdown.value;
+
+  let filteredMountain = mountainsArray.find(mountain => mountain.name == value);
+  mountainTemplate(filteredMountain);
+}
+
+submitButton.addEventListener('click', filterMountain, async () =>{});
+
+async function mountainTemplate(mountain) {
+  let mySunrise = await getSunsetForMountain(`${mountain.coords.lat},${mountain.coords.lng}`);
+
+  console.log(mySunrise.results.sunrise)
+
+  document.getElementById("mountains").innerHTML = 
+  `
+  <div class="row justify-content-center">
+    <div class="col-4 mt-3">
+      <div class="card">
+        <img style="height: 250px;" class="card-img-top mx-auto d-block mountain-photo" src="images/${mountain.img}">
+        <h2 class="mountain-name card-title text-center pt-4">${mountain.name} <span class="species">(${mountain.elevation} feet)</span></h2>
+        <hr class="w-100 ">
+        <div class="card-body pt-0"
+          <h4 class="mountain-desc card-text">${mountain.desc} </h4>
+          <hr class="w-100">
+          <p class="card-text"><strong>Effort:</strong> ${mountain.effort}</p>
+          <hr class="w-100">
+          <strong class="card-text">Coordinates:</strong> lat: ${mountain.coords.lat} lng: ${mountain.coords.lng}
+          <hr class="w-100">
+          <strong class="card-text">Sunrise:</strong> ${mySunrise.results.sunrise}
+        </div>
+      </div>
     </div>
+  </div>
     `;
 }
 
-document.getElementById("mountains").innerHTML = `
-  <h1 class="app-title"> ${mountainsArray.length} Mountains to climb</h1>
-  ${mountainsArray.map(mountainTemplate).join("")}
-  <p class="footer">These ${
-    mountainsArray.length
-  } mountants were added recently. Check back soon for updates.</p>
-`;
 
 async function getSunsetForMountain(lat, lng) {
   let response = await fetch(
@@ -34,16 +62,4 @@ async function getSunsetForMountain(lat, lng) {
   );
   let data = await response.json();
   return data;
-}
-
-function loadData() {
-  var down = document.getElementById("mountain");
-  for (let i = 0; i < mountainsArray.length; i++) {
-    var optn = mountainsArray[i];
-    var el = document.createElement("option");
-    el.textContent = optn;
-    el.value = optn;
-    down.appendChild(el);
-  }
-  down.innerHTML = "Elements Added";
 }

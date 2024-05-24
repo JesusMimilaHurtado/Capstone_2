@@ -24,7 +24,7 @@ function updateDropdown(radio) {
         info.style.display = 'none';
         dropdown.style.display = 'block';
         const defaultOption = document.createElement('option');
-        defaultOption.value = '';
+        defaultOption.value = 'blank';
         defaultOption.text = '--Choose Location--';
         dropdown.appendChild(defaultOption);
 
@@ -40,7 +40,7 @@ function updateDropdown(radio) {
         info.style.display = 'none';
         dropdown.style.display = 'block';
         const defaultOption = document.createElement('option');
-        defaultOption.value = '';
+        defaultOption.value = 'blank';
         defaultOption.text = '--Choose Type--';
         dropdown.appendChild(defaultOption);
 
@@ -69,6 +69,8 @@ function getValue(){
 function displayInfo(value) {
     const radio = document.querySelector('input[name=radio]:checked').value;
     const img = document.getElementById('silhouette');
+    const parkcell = document.getElementById('table');
+
     if (img) {
         img.style.display = 'none';
     }
@@ -86,11 +88,11 @@ function displayInfo(value) {
     else if (radio === 'type') {
         filteredArray = nationalParksArray.filter(park => park.LocationName.includes(value))
     }
-    else if(dropdown.value == '')(
-        info.style.display = 'none'
+    else if(dropdown.value == 'blank')(
+       info.push = 'none'
     )
 
-    const parkcell = document.getElementById('table'); // Ensure 'parkcell' is defined outside the loop
+   
     parkcell.innerHTML = ''; // Clear any existing content before appending
     filteredArray.forEach(park => {
         if(park.Phone === 0){

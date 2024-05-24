@@ -45,9 +45,9 @@ async function mountainTemplate(mountain) {
           <hr class="w-100">
           <p class="card-text"><strong>Effort:</strong> ${mountain.effort}</p>
           <hr class="w-100">
-          <strong class="card-text">Coordinates:</strong> lat: ${mountain.coords.lat} lng: ${mountain.coords.lng}
+          <strong class="card-text">Coordinates:</strong> <strong>lat: </strong>${mountain.coords.lat} & <strong>lng: </strong>${mountain.coords.lng}
           <hr class="w-100">
-          <strong class="card-text">Sunrise:</strong> ${mySunrise.results.sunrise}
+          <strong class="card-text">Sunrise:</strong> ${mySunrise.results.sunrise} & <strong class="card-text">Sunset:</strong> ${mySunrise.results.sunset}
         </div>
       </div>
     </div>

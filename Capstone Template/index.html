@@ -9,6 +9,10 @@
     <!-- Bootstrap CSS v5.3.0 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Customs CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -28,53 +32,59 @@
         </header>
     </div>
     <main class="mb-3">
-        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://lh6.googleusercontent.com/proxy/UM-sXrQntei8Vi9Bjkl0G8Ysc0KWXj2kJCv3YOQtMjJRICSFubW7wxRFUT56Xa_ZiTag8osh2HX6HCY"
-                        class="d-block w-100 h-30" alt="Man staring at moutain">
-                    <div class="carousel-caption d-md-block ">
-                        <h4>Mount Bond, New Hampshire</h4>
-                        <p>Is a 4,698 foot mountian with 19 scenic trails of the beautiful forest mountain range.</p>
+        <div id="carousel" class="shadow-sm">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://lh6.googleusercontent.com/proxy/UM-sXrQntei8Vi9Bjkl0G8Ysc0KWXj2kJCv3YOQtMjJRICSFubW7wxRFUT56Xa_ZiTag8osh2HX6HCY"
+                            class="d-block w-100 h-30" alt="Man staring at moutain">
+                        <div class="carousel-caption d-md-block ">
+                            <h4>Mount Bond, New Hampshire</h4>
+                            <p>Is a 4,698 foot mountian with 19 scenic trails of the beautiful forest mountain range.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/Capstone Template/images/Wildcat-StoryImage.jpg" class="d-block w-100 h-30"
+                            alt="Snowy Mountains">
+                        <div class="carousel-caption d-md-block">
+                            <h4>Wildcat Mountain, New Hampshire</h4>
+                            <p>A ski resort in the White Mountain National Forest with 225 acres of skiable terrain and
+                                48
+                                trails. Rating from beginner and intermediate</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.nps.gov/common/uploads/grid_builder/alag/crop16_9/6D3DE1E6-1DD8-B71B-0BCCD1CA7363F2B8.jpg?width=1300&quality=90&mode=crop"
+                            class="d-block w-100 h-30" alt="Green field and mountain">
+                        <div class="carousel-caption d-md-block">
+                            <h4>Alagnak Wild River, Alaska</h4>
+                            <p>A surrounded by beautiful forest and wild life perfect for fishing with cool and cloudy
+                                weather.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="/Capstone Template/images/Wildcat-StoryImage.jpg" class="d-block w-100 h-30"
-                        alt="Snowy Mountains">
-                    <div class="carousel-caption d-md-block">
-                        <h4>Wildcat Mountain, New Hampshire</h4>
-                        <p>A ski resort in the White Mountain National Forest with 225 acres of skiable terrain and 48
-                            trails. Rating from beginner and intermediate</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://www.nps.gov/common/uploads/grid_builder/alag/crop16_9/6D3DE1E6-1DD8-B71B-0BCCD1CA7363F2B8.jpg?width=1300&quality=90&mode=crop"
-                        class="d-block w-100 h-30" alt="Green field and mountain">
-                    <div class="carousel-caption d-md-block">
-                        <h4>Alagnak Wild River, Alaska</h4>
-                        <p>A surrounded by beautiful forest and wild life perfect for fishing with cool and cloudy
-                            weather.</p>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        <div class="container mt-3 " id="cards">
+        <div class="container mt-4 " id="cards">
             <div class="row justify-content-between">
                 <div class="col-6">
-                    <div class="card">
-                        <img src="/Capstone Template/images/Antietam.jpeg" class="card-img-top" alt="Antietam Battlefield">
+                    <div class="card shadow">
+                        <img src="/Capstone Template/images/Antietam.jpeg" class="card-img-top"
+                            alt="Antietam Battlefield">
                         <div class="card-body text-center">
-                            <p class="card-text">Visit our search page to learn about some National Parks and plan future visits!</p>
+                            <p class="card-text">Visit our search page to learn about some National Parks and plan
+                                future visits!</p>
                         </div>
                         <div class="card-body text-center">
                             <a href="nationalpark.html" class="card-link btn bg-success-subtle">National Parks</a>
@@ -82,10 +92,11 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="card">
+                    <div class="card shadow">
                         <img src="/Capstone Template/images/mt_Pierce.jpeg" class="card-img-top" alt="Mount Pierce">
                         <div class="card-body text-center">
-                            <p class="card-text">It also contains 48 different mountains all with beautiful trails you can visit!</p>
+                            <p class="card-text">It also contains 48 different mountains all with beautiful trails you
+                                can visit!</p>
                         </div>
                         <div class="card-body text-center">
                             <a href="mountains.html" class="card-link btn bg-success-subtle">Mountains Info</a>
@@ -93,7 +104,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </main>
 
     <footer>

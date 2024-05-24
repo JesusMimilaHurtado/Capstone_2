@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2870],{82870:function(e){e.exports="https://static2.rawpixel.com/_next/static/images/team-filled-1eb51e89596e6f66f2253ff45375c70b.svg"}}]);

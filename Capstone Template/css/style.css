@@ -5,6 +5,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .carousel-item img{
@@ -39,14 +40,26 @@ hr{
 
 td, th{
     border:solid 2px  black;
-    margin:auto
+    margin:auto;
 }
 
 table{
     max-width:80%;
-}
+    background:hsl(30, 35%, 84%);
+    opacity:.9;
+    box-shadow: 3px 3px 25px 0px rgba(248, 228, 195, 0.71);}
 
 hr{
     color:black;
     height:2px;
+}
+
+input[type='radio']{
+    accent-color: hsl(192, 82%, 50%);
+}
+
+#carousel{
+    width:88%;
+    margin: auto;
+    margin-top:30px;
 }

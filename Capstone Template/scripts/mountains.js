@@ -25,7 +25,7 @@ function filterMountain(){
   mountainTemplate(filteredMountain);
 }
 
-submitButton.addEventListener('click', filterMountain, async () =>{});
+dropdown.addEventListener('change', filterMountain, async () =>{});
 
 async function mountainTemplate(mountain) {
   let mySunrise = await getSunsetForMountain(`${mountain.coords.lat},${mountain.coords.lng}`);
@@ -47,7 +47,7 @@ async function mountainTemplate(mountain) {
           <hr class="w-100">
           <strong class="card-text">Coordinates:</strong> <strong>lat: </strong>${mountain.coords.lat} & <strong>lng: </strong>${mountain.coords.lng}
           <hr class="w-100">
-          <strong class="card-text">Sunrise:</strong> ${mySunrise.results.sunrise} & <strong class="card-text">Sunset:</strong> ${mySunrise.results.sunset}
+          <strong class="card-text">Sunrise(UTC):</strong> ${mySunrise.results.sunrise} & <strong class="card-text">Sunset(UTC):</strong> ${mySunrise.results.sunset}
         </div>
       </div>
     </div>

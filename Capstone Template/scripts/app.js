@@ -75,7 +75,7 @@ function displayInfo(value) {
         img.style.display = 'none';
     }
 
-    const info = document.getElementById('info'); // Ensure 'info' element is defined
+    const info = document.getElementById('info');
     if (img.style.display == 'none' && info) {
         info.style.display = '';
     }
@@ -99,7 +99,7 @@ function displayInfo(value) {
             park.Phone = 'N/A';
         }
         if(park.Visit === undefined){
-            park.Visit = 'N/A';
+            park.Visit = '';
         }
         const parkInfo = document.createElement('tr'); // Create 'parkInfo' inside the loop
         parkInfo.innerHTML = `
@@ -107,7 +107,7 @@ function displayInfo(value) {
             <td class="text-center col-2">${park.LocationName}</td>
             <td class="text-center col-2">${park.Address}</td>
             <td class="text-center col-2">${park.Phone}</td>
-            <td class="text-center col-2">${park.Visit}</td>
+            <td class="text-center col-2"><a href="${park.Visit}">${park.Visit}</a></td>
         `;
         parkcell.appendChild(parkInfo);
     });

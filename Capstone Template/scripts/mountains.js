@@ -30,7 +30,6 @@ dropdown.addEventListener('change', filterMountain, async () =>{});
 async function mountainTemplate(mountain) {
   let mySunrise = await getSunsetForMountain(`${mountain.coords.lat},${mountain.coords.lng}`);
 
-  console.log(mySunrise.results.sunrise)
 
   document.getElementById("mountains").innerHTML = 
   `

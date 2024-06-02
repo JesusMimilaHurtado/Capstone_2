@@ -4,7 +4,7 @@
 
 body {
     margin: 0px;
-    padding: 0px;
+   padding: 0px;
     font-family: "Roboto Condensed", sans-serif;
 }
 .carousel-item img{
@@ -65,4 +65,8 @@ input[type='radio']{
     width:88%;
     margin: auto;
     margin-top:30px;
+}
+option{
+    height: 200px;
+    overflow: scroll;
 }

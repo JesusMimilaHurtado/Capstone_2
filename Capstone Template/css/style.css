@@ -1,7 +1,7 @@
 
 body {
     margin: 0px;
-    padding: 0px;
+   padding: 0px;
     font-family: "Roboto Condensed", sans-serif;
 }
 .carousel-item img{
@@ -70,13 +70,5 @@ input[type='radio']{
     margin: auto;
     margin-top:30px;
 
-}
-
-option{
-    height: 200px;
-    overflow: scroll;
-}
-
 .card-body p{
     padding:10px;
-}

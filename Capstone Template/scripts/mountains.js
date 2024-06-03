@@ -33,8 +33,8 @@ async function mountainTemplate(mountain) {
 
   document.getElementById("mountains").innerHTML = 
   `
-  <div class="row justify-content-center">
-    <div class="col-4 mt-3">
+  <div class="row mb-4 justify-content-center">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4 mt-3">
       <div class="card">
         <img style="height: 250px;" class="card-img-top mx-auto d-block mountain-photo" src="images/${mountain.img}">
         <h2 class="mountain-name card-title text-center pt-4">${mountain.name} <span class="species">(${mountain.elevation} feet)</span></h2>
